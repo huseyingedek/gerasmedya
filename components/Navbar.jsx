@@ -101,6 +101,14 @@ export default function Navbar() {
           <Link href="/iletisim" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
             İletişim
           </Link>
+          <a
+            href="https://medya.gerasonline.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-semibold px-4 py-2 rounded-lg border border-gold-500/30 text-gold-400 hover:bg-gold-500/10 hover:border-gold-500/60 transition-all duration-200"
+          >
+            Panele Giriş
+          </a>
           <Link href="/iletisim" className="btn-primary text-sm font-semibold px-5 py-2.5 rounded-lg text-white">
             Ücretsiz Analiz Al
           </Link>
@@ -135,6 +143,14 @@ export default function Navbar() {
             <Link href="/#neden-biz" className="block text-gray-300 py-2" onClick={() => setMenuOpen(false)}>
               Neden Biz
             </Link>
+            <a
+              href="https://medya.gerasonline.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block text-center text-sm font-semibold px-5 py-3.5 rounded-lg border border-gold-500/30 text-gold-400"
+            >
+              Panele Giriş
+            </a>
             <Link
               href="/iletisim"
               className="btn-primary block text-sm font-semibold px-5 py-3.5 rounded-lg text-white text-center"

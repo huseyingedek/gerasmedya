@@ -85,7 +85,7 @@ export default function StrategyPageClient() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/iletisim" className="btn-primary px-10 py-4 rounded-xl text-white font-bold text-lg">
+            <Link href="/uye-ol" className="btn-primary px-10 py-4 rounded-xl text-white font-bold text-lg">
               Bu Stratejiyi Uygulayalım →
             </Link>
             <a href="#nasil-calisir" className="px-8 py-4 rounded-xl border border-white/10 text-gray-300 font-semibold hover:bg-white/5 transition-all duration-200">
