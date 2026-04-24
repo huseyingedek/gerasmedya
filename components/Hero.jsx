@@ -64,7 +64,7 @@ export default function Hero() {
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
           Her gün potansiyel müşterileriniz rakiplerinizin reklamını görüyor.{" "}
           <span className="text-white font-medium">
-            Meta ve Google Ads'de doğru stratejiyle sahneye çıkın
+            Meta ve Google Ads&apos;de doğru stratejiyle sahneye çıkın
           </span>{" "}
           — bütçenizin her kuruşunu satışa dönüştürelim.
         </p>

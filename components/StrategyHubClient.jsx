@@ -117,7 +117,7 @@ export default function StrategyHubClient() {
                             Aktif
                           </span>
                         </div>
-                        <p className="text-gold-400 font-semibold mb-3 italic">"{s.tagline}"</p>
+                        <p className="text-gold-400 font-semibold mb-3 italic">&quot;{s.tagline}&quot;</p>
                         <p className="text-gray-400 leading-relaxed mb-5">{s.desc}</p>
 
                         <div className="flex flex-wrap gap-2 mb-6">
@@ -155,7 +155,7 @@ export default function StrategyHubClient() {
                           Yakında
                         </span>
                       </div>
-                      <p className="text-gray-600 font-semibold mb-3 italic">"{s.tagline}"</p>
+                      <p className="text-gray-600 font-semibold mb-3 italic">&quot;{s.tagline}&quot;</p>
                       <p className="text-gray-600 leading-relaxed mb-5">{s.desc}</p>
 
                       <div className="flex flex-wrap gap-2">

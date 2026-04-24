@@ -39,7 +39,7 @@ export default function StrategyTeaser() {
                 <span className="gradient-text">Kendinizle Rekabet Edin</span>
               </h2>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Sektörünüzde o kadar güçlü bir dijital varlık oluşturun ki müşteri nereye baksa sizi görsün. Instagram'da, Google'da, YouTube'da — her yerde. Rakibinize gitse bile size dönsün.
+                Sektörünüzde o kadar güçlü bir dijital varlık oluşturun ki müşteri nereye baksa sizi görsün. Instagram&apos;da, Google&apos;da, YouTube&apos;da — her yerde. Rakibinize gitse bile size dönsün.
               </p>
               <p className="text-gray-500 text-sm leading-relaxed mb-8">
                 Bu kalabalıkta öne çıkmanın sırrı daha yüksek sesle bağırmak değil. Her yerde var olmak.

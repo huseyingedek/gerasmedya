@@ -81,7 +81,7 @@ export default function StrategyPageClient() {
             <span className="text-white font-bold">Kendinizle rekabet edin.</span>
           </p>
           <p className="text-base md:text-lg text-gray-500 max-w-2xl mx-auto mb-12 leading-relaxed">
-            Müşteriniz nereye baksa sizi görsün. Instagram'da, Google'da, YouTube'da, her sitede. O kadar çok yerde olun ki müşteri sizi kaçırmak istese bile kaçamasın — ve rakibinize gitse bile yine size dönsün.
+            Müşteriniz nereye baksa sizi görsün. Instagram&apos;da, Google&apos;da, YouTube&apos;da, her sitede. O kadar çok yerde olun ki müşteri sizi kaçırmak istese bile kaçamasın — ve rakibinize gitse bile yine size dönsün.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -107,10 +107,10 @@ export default function StrategyPageClient() {
               Sektörünüzdeki her rakibiniz müşteri peşinde koşuyor. Hepsi aynı kişiyi hedefliyor, hepsi aynı kanalda reklamlar veriyor. Bu kalabalıkta öne çıkmak neredeyse imkânsız hale geliyor.
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Çoğu işletme tek bir kanala yükleniyor: "Sadece Instagram'da reklam verelim" ya da "Sadece Google'a para dökelim." Ama müşteri sadece tek bir kanalda yaşamıyor.
+              Çoğu işletme tek bir kanala yükleniyor: &quot;Sadece Instagram&apos;da reklam verelim&quot; ya da &quot;Sadece Google&apos;a para dökelim.&quot; Ama müşteri sadece tek bir kanalda yaşamıyor.
             </p>
             <p className="text-white text-xl font-bold leading-relaxed">
-              Müşteri sabah Instagram'a bakıyor, öğle Google'da arıyor, akşam YouTube izliyor. Siz sadece bir yerdeyseniz, diğer zamanlarda rakibiniz önünde.
+              Müşteri sabah Instagram&apos;da bakıyor, öğle Google&apos;da arıyor, akşam YouTube izliyor. Siz sadece bir yerdeyseniz, diğer zamanlarda rakibiniz önünde.
             </p>
           </div>
         </div>
@@ -149,9 +149,9 @@ export default function StrategyPageClient() {
           {/* Key insight */}
           <div ref={r()} className="section-animate rounded-2xl p-8 md:p-10 text-center" style={{ background: "linear-gradient(135deg,rgba(249,115,22,.12),rgba(239,68,68,.08))", border: "1px solid rgba(249,115,22,.25)" }}>
             <p className="text-2xl md:text-3xl font-black text-white leading-snug">
-              "Müşteri rakibinize baksa bile,<br />
+              &quot;Müşteri rakibinize baksa bile,<br />
               <span className="gradient-text">gözünün köşesinde siz varsınız.</span><br />
-              Karar anında aklına ilk siz gelirsiniz."
+              Karar anında aklına ilk siz gelirsiniz.&quot;
             </p>
           </div>
         </div>
@@ -244,7 +244,7 @@ export default function StrategyPageClient() {
                   <span className="gradient-text">Ne Anlama Geliyor?</span>
                 </h2>
                 <p className="text-gray-300 leading-relaxed mb-4">
-                  Rakibinize bakıp "ondan daha iyi olmalıyım" diye düşünmek sizi sınırlar. Çünkü rakibinizin tavanı sizin tavanınız olur.
+                  Rakibinize bakıp &quot;ondan daha iyi olmalıyım&quot; diye düşünmek sizi sınırlar. Çünkü rakibinizin tavanı sizin tavanınız olur.
                 </p>
                 <p className="text-gray-300 leading-relaxed mb-4">
                   Ama kendinizle rekabet ettiğinizde — dünden daha iyi bir reklam, geçen aydan daha iyi bir dönüşüm oranı, önceki kampanyadan daha düşük maliyet hedeflersiniz. Tavan ortadan kalkar.
