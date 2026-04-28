@@ -99,13 +99,13 @@ export default function VeriOdakliClient() {
           <div ref={r()} className="section-animate gradient-border p-8 md:p-14 text-center">
             <div className="text-5xl mb-6">📉</div>
             <h2 className="text-3xl md:text-4xl font-black mb-6">
-              "Reklam Veriyoruz Ama Sonuç Yok"
+              &quot;Reklam Veriyoruz Ama Sonuç Yok&quot;
             </h2>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Bu cümleyi her gün duyuyoruz. Ve her seferinde aynı soruyu soruyoruz: <span className="text-white font-semibold">"Hangi veriyle bunu söylüyorsunuz?"</span>
+              Bu cümleyi her gün duyuyoruz. Ve her seferinde aynı soruyu soruyoruz: <span className="text-white font-semibold">&quot;Hangi veriyle bunu söylüyorsunuz?&quot;</span>
             </p>
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
-              Çoğu zaman cevap şu oluyor: "Beğeni sayısına bakıyoruz" ya da "Tıklama aldık ama satış olmadı." Ama beğeni satış değildir. Tıklama gelir değildir.
+              Çoğu zaman cevap şu oluyor: &quot;Beğeni sayısına bakıyoruz&quot; ya da &quot;Tıklama aldık ama satış olmadı.&quot; Ama beğeni satış değildir. Tıklama gelir değildir.
             </p>
             <p className="text-white text-xl font-bold leading-relaxed">
               Doğru metrik okunmadan verilen her reklam kararı, gözler kapalı dart atmak gibidir. Bazen isabet eder — ama çoğunlukla bütçe boşa gider.

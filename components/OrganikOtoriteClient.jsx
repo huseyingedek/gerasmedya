@@ -135,7 +135,7 @@ export default function OrganikOtoriteClient() {
               Organik Otoritenin{" "}
               <span className="gradient-text">4 Ayağı</span>
             </h2>
-            <p className="text-gray-400 max-w-xl mx-auto">Bu 4'ü birlikte uyguladığınızda Google sizi sektörün otoritesi olarak görmeye başlar.</p>
+            <p className="text-gray-400 max-w-xl mx-auto">Bu 4&apos;ü birlikte uyguladığınızda Google sizi sektörün otoritesi olarak görmeye başlar.</p>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-5">
