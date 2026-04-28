@@ -8,6 +8,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -29,10 +30,10 @@ export default function Navbar() {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-black/85 backdrop-blur-xl border-b border-white/5" : "bg-transparent"
+        scrolled ? "border-b border-white/10 backdrop-blur-xl" : "bg-transparent"
       }`}
     >
-      <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between overflow-visible">
+      <div className="max-w-6xl mx-auto px-4 md:px-6 h-16 md:h-20 flex items-center justify-between overflow-visible">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
@@ -40,7 +41,7 @@ export default function Navbar() {
             alt="Geras Medya Logo"
             width={500}
             height={200}
-            className="h-[160px] w-auto object-contain"
+            className="h-28 md:h-[160px] w-auto object-contain"
             priority
           />
         </Link>
@@ -102,15 +103,15 @@ export default function Navbar() {
             İletişim
           </Link>
           <a
-            href="https://medya.gerasonline.com"
+            href="https://panel.gerasonline.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-semibold px-4 py-2 rounded-lg border border-gold-500/30 text-gold-400 hover:bg-gold-500/10 hover:border-gold-500/60 transition-all duration-200"
           >
             Panele Giriş
           </a>
-          <Link href="/iletisim" className="btn-primary text-sm font-semibold px-5 py-2.5 rounded-lg text-white">
-            Ücretsiz Analiz Al
+          <Link href="/uye-ol" className="btn-primary text-sm font-semibold px-5 py-2.5 rounded-lg text-white">
+            Üye Ol
           </Link>
         </div>
 
@@ -126,37 +127,72 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {menuOpen && (
-        <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-white/5 px-6 py-4">
-          <p className="text-xs text-gray-600 uppercase tracking-widest font-semibold mb-3">Hizmetler</p>
-          {services.map((s) => (
-            <Link
-              key={s.slug}
-              href={`/hizmetler/${s.slug}`}
-              onClick={() => setMenuOpen(false)}
-              className="flex items-center gap-3 py-2.5 border-b border-white/[0.05] last:border-0"
+        <div className="md:hidden bg-black/95 backdrop-blur-xl border-t border-white/5 px-5 py-3">
+          {/* Ana linkler */}
+          <div className="space-y-1">
+            {/* Hizmetler accordion */}
+            <button
+              onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+              className="w-full flex items-center justify-between py-3 text-sm text-gray-300 font-medium border-b border-white/[0.05]"
             >
-              <span>{s.icon}</span>
-              <span className="text-sm text-gray-300">{s.title}</span>
+              <span>Hizmetler</span>
+              <svg className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${mobileServicesOpen ? "rotate-180" : ""}`}
+                fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            {mobileServicesOpen && (
+              <div className="pl-3 pb-1">
+                {services.map((s) => (
+                  <Link
+                    key={s.slug}
+                    href={`/hizmetler/${s.slug}`}
+                    onClick={() => { setMenuOpen(false); setMobileServicesOpen(false); }}
+                    className="flex items-center gap-3 py-2.5 border-b border-white/[0.04] last:border-0"
+                  >
+                    <span className="text-lg">{s.icon}</span>
+                    <span className="text-sm text-gray-400">{s.title}</span>
+                  </Link>
+                ))}
+                <Link
+                  href="/hizmetler"
+                  onClick={() => { setMenuOpen(false); setMobileServicesOpen(false); }}
+                  className="block text-xs text-gold-400 font-semibold py-2 mt-1"
+                >
+                  Tüm Hizmetleri Gör →
+                </Link>
+              </div>
+            )}
+
+            <Link href="/strateji" onClick={() => setMenuOpen(false)}
+              className="flex items-center justify-between py-3 text-sm text-gray-300 font-medium border-b border-white/[0.05]">
+              Strateji
             </Link>
-          ))}
-          <div className="mt-4 space-y-3">
-            <Link href="/#neden-biz" className="block text-gray-300 py-2" onClick={() => setMenuOpen(false)}>
+            <Link href="/#neden-biz" onClick={() => setMenuOpen(false)}
+              className="flex items-center justify-between py-3 text-sm text-gray-300 font-medium border-b border-white/[0.05]">
               Neden Biz
             </Link>
+            <Link href="/iletisim" onClick={() => setMenuOpen(false)}
+              className="flex items-center justify-between py-3 text-sm text-gray-300 font-medium border-b border-white/[0.05]">
+              İletişim
+            </Link>
+          </div>
+
+          <div className="mt-4 space-y-2.5 pb-2">
             <a
-              href="https://medya.gerasonline.com"
+              href="https://panel.gerasonline.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="block text-center text-sm font-semibold px-5 py-3.5 rounded-lg border border-gold-500/30 text-gold-400"
+              className="block text-center text-sm font-semibold px-5 py-3.5 rounded-xl border border-gold-500/30 text-gold-400 hover:bg-gold-500/10 transition-all"
             >
               Panele Giriş
             </a>
             <Link
-              href="/iletisim"
-              className="btn-primary block text-sm font-semibold px-5 py-3.5 rounded-lg text-white text-center"
+              href="/uye-ol"
+              className="btn-primary block text-sm font-semibold px-5 py-3.5 rounded-xl text-white text-center"
               onClick={() => setMenuOpen(false)}
             >
-              Ücretsiz Analiz Al
+              Üye Ol →
             </Link>
           </div>
         </div>

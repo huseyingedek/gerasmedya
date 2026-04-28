@@ -17,7 +17,7 @@ export default function ContactForm() {
   }, []);
 
   return (
-    <section id="iletisim" className="py-24 px-6 relative">
+    <section id="iletisim" className="py-16 md:py-24 px-4 md:px-6 relative">
       <div className="orb w-96 h-96 bg-gold-500" style={{ top: "20%", right: "5%", opacity: 0.07 }} />
 
       <div className="max-w-3xl mx-auto">
@@ -40,7 +40,7 @@ export default function ContactForm() {
             ].map((item) => (
               <div
                 key={item.title}
-                className="p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06] text-center"
+                className="p-6 rounded-2xl bg-white/[0.06] border border-white/[0.12] text-center"
               >
                 <div className="text-3xl mb-3">{item.icon}</div>
                 <h3 className="font-bold mb-2 text-sm">{item.title}</h3>

@@ -14,12 +14,12 @@ export default function StrategyTeaser() {
   }, []);
 
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-16 md:py-24 px-4 md:px-6 relative overflow-hidden">
       <div className="orb w-[600px] h-[600px] bg-gold-500" style={{ top: "50%", left: "50%", transform: "translate(-50%,-50%)", opacity: 0.06 }} />
 
       <div ref={ref} className="section-animate max-w-5xl mx-auto">
         <div
-          className="rounded-3xl p-10 md:p-16 relative overflow-hidden"
+          className="rounded-2xl md:rounded-3xl p-6 md:p-16 relative overflow-hidden"
           style={{ background: "linear-gradient(135deg,rgba(249,115,22,.1) 0%,rgba(0,0,0,0) 60%,rgba(239,68,68,.08) 100%)", border: "1px solid rgba(249,115,22,.2)" }}
         >
           {/* Decorative */}
@@ -28,7 +28,7 @@ export default function StrategyTeaser() {
             <div className="w-3/4 h-3/4 border border-gold-500/50 rounded-full absolute top-1/2 left-1/2" style={{ transform: "translate(-50%,-50%)" }} />
           </div>
 
-          <div className="relative z-10 grid md:grid-cols-2 gap-10 items-center">
+          <div className="relative z-10 grid md:grid-cols-2 gap-8 md:gap-10 items-center">
             {/* Left */}
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-gold-500/30 bg-gold-500/10 text-gold-400 text-xs font-semibold uppercase tracking-wider mb-6">
@@ -63,7 +63,7 @@ export default function StrategyTeaser() {
               ].map((item, i) => (
                 <div
                   key={item.platform}
-                  className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.03] border border-white/[0.06] group hover:border-gold-500/20 transition-all duration-200"
+                  className="flex items-center gap-4 p-4 rounded-xl bg-white/[0.06] border border-white/[0.12] group hover:border-gold-500/20 transition-all duration-200"
                   style={{ animationDelay: `${i * 100}ms` }}
                 >
                   <div className={`w-9 h-9 rounded-lg flex items-center justify-center text-sm font-black flex-shrink-0 ${item.step === "✓" ? "bg-gold-500 text-white" : "bg-gold-500/15 text-gold-400 border border-gold-500/30"}`}>

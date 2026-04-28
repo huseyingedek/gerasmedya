@@ -14,7 +14,7 @@ export default function Footer() {
             alt="Geras Medya Logo"
             width={500}
             height={200}
-            className="h-[160px] w-auto object-contain"
+            className="h-14 md:h-20 w-auto object-contain"
           />
           <p className="text-xs text-gold-400/70 tracking-[0.2em] uppercase font-medium">
             — Dijital Bir Çözüm —

@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-// Gerçek müşteri yorumlarını buraya ekleyebilirsin
 const testimonials = [
   {
     name: "Ahmet Yılmaz",
@@ -43,7 +42,7 @@ export default function Testimonials() {
   }, []);
 
   return (
-    <section className="py-24 px-6 relative">
+    <section className="py-16 md:py-24 px-4 md:px-6 relative">
       <div
         className="orb w-96 h-96 bg-gold-500"
         style={{ top: "20%", left: "5%", opacity: 0.06 }}
@@ -72,7 +71,7 @@ export default function Testimonials() {
             <div
               key={t.name}
               ref={(el) => (refs.current[i + 1] = el)}
-              className="section-animate gradient-border p-7 flex flex-col gap-4"
+              className="section-animate gradient-border card-glow p-7 flex flex-col gap-4"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               {/* Stars */}
@@ -88,7 +87,7 @@ export default function Testimonials() {
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-3 pt-2 border-t border-white/[0.06]">
+              <div className="flex items-center gap-3 pt-2 border-t border-white/[0.12]">
                 <div className="w-10 h-10 rounded-full bg-gradient-to-br from-gold-500 to-red-500 flex items-center justify-center text-white text-xs font-black">
                   {t.avatar}
                 </div>
@@ -106,19 +105,19 @@ export default function Testimonials() {
         {/* Bottom stats */}
         <div
           ref={(el) => (refs.current[testimonials.length + 1] = el)}
-          className="section-animate mt-12 grid grid-cols-3 gap-6"
+          className="section-animate mt-12 grid grid-cols-3 gap-2 md:gap-6"
         >
           {[
             { value: "50+", label: "Mutlu Müşteri" },
             { value: "4.9/5", label: "Ortalama Puan" },
-            { value: "%98", label: "Memnuniyet Oranı" },
+            { value: "%98", label: "Memnuniyet" },
           ].map((stat) => (
             <div
               key={stat.label}
-              className="text-center p-6 rounded-2xl bg-white/[0.03] border border-white/[0.06]"
+              className="text-center card-glow p-3 md:p-6 rounded-2xl bg-white/[0.06] border border-white/[0.12]"
             >
-              <p className="text-3xl font-black gradient-text mb-1">{stat.value}</p>
-              <p className="text-gray-500 text-sm">{stat.label}</p>
+              <p className="text-xl md:text-3xl font-black gradient-text mb-1">{stat.value}</p>
+              <p className="text-gray-500 text-xs md:text-sm">{stat.label}</p>
             </div>
           ))}
         </div>

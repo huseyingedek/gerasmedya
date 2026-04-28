@@ -19,7 +19,7 @@ export default function Services() {
   const others = services.filter((s) => !["meta-ads", "google-ads"].includes(s.slug));
 
   return (
-    <section id="hizmetler" className="py-24 px-6 relative">
+    <section id="hizmetler" className="py-16 md:py-24 px-4 md:px-6 relative">
       <div className="orb w-96 h-96 bg-orange-600" style={{ top: "30%", right: "-5%", opacity: 0.08 }} />
 
       <div className="max-w-6xl mx-auto">
@@ -42,7 +42,7 @@ export default function Services() {
               key={service.slug}
               href={`/hizmetler/${service.slug}`}
               ref={(el) => (refs.current[i + 1] = el)}
-              className="section-animate gradient-border p-8 group hover:scale-[1.02] transition-transform duration-300 block"
+              className="section-animate gradient-border card-glow p-8 group block"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div className="flex items-start gap-4 mb-4">
@@ -70,7 +70,7 @@ export default function Services() {
               key={service.slug}
               href={`/hizmetler/${service.slug}`}
               ref={(el) => (refs.current[i + 3] = el)}
-              className="section-animate gradient-border p-6 group hover:scale-[1.02] transition-transform duration-300 block"
+              className="section-animate gradient-border card-glow p-6 group block"
               style={{ transitionDelay: `${i * 100}ms` }}
             >
               <div className="text-3xl mb-3">{service.icon}</div>

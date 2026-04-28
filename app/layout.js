@@ -1,6 +1,12 @@
 import "./globals.css";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import ScrollToTop from "@/components/ScrollToTop";
+import CursorGlow from "@/components/CursorGlow";
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
 export const metadata = {
   title: "Geras Medya | Dijital Bir Çözüm — Meta Ads & Google Ads Uzmanı",
@@ -79,6 +85,7 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <CursorGlow />
         {children}
         <WhatsAppButton />
         <ScrollToTop />
