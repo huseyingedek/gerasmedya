@@ -1,9 +1,14 @@
 import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
-export const alt = "Geras Medya | Meta Ads & Google Ads Uzmanı";
+export const alt = "Geras Medya | Meta Ads & Google Ads Ajansı — Türkiye";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
+
+// Marka renkleri
+const GOLD = "#C9A84C";
+const GOLD_LIGHT = "#D4B86A";
+const BG = "#0f0f1a";
 
 export default function OGImage() {
   return new ImageResponse(
@@ -12,7 +17,7 @@ export default function OGImage() {
         style={{
           width: "1200px",
           height: "630px",
-          background: "linear-gradient(135deg, #0a0a0a 0%, #111111 50%, #0a0a0a 100%)",
+          background: `linear-gradient(135deg, ${BG} 0%, #13131f 50%, ${BG} 100%)`,
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -22,109 +27,131 @@ export default function OGImage() {
           overflow: "hidden",
         }}
       >
-        {/* Glow orb left */}
+        {/* Grid pattern */}
         <div
           style={{
             position: "absolute",
-            top: "-80px",
-            left: "-80px",
-            width: "400px",
-            height: "400px",
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(249,115,22,0.25) 0%, transparent 70%)",
-          }}
-        />
-        {/* Glow orb right */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "-80px",
-            right: "-80px",
-            width: "350px",
-            height: "350px",
-            borderRadius: "50%",
-            background: "radial-gradient(circle, rgba(239,68,68,0.2) 0%, transparent 70%)",
+            inset: 0,
+            backgroundImage:
+              "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
+            backgroundSize: "60px 60px",
           }}
         />
 
-        {/* Logo */}
-        <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "32px" }}>
+        {/* Gold glow top-left */}
+        <div
+          style={{
+            position: "absolute",
+            top: "-120px",
+            left: "-80px",
+            width: "500px",
+            height: "500px",
+            borderRadius: "50%",
+            background: `radial-gradient(circle, rgba(201,168,76,0.22) 0%, transparent 70%)`,
+          }}
+        />
+        {/* Subtle red glow bottom-right */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: "-100px",
+            right: "-80px",
+            width: "400px",
+            height: "400px",
+            borderRadius: "50%",
+            background: "radial-gradient(circle, rgba(168,100,60,0.15) 0%, transparent 70%)",
+          }}
+        />
+
+        {/* Gold border top */}
+        <div
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            height: "3px",
+            background: `linear-gradient(90deg, transparent, ${GOLD}, transparent)`,
+          }}
+        />
+
+        {/* Logo / Brand */}
+        <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "28px" }}>
           <div
             style={{
-              width: "52px",
-              height: "52px",
-              borderRadius: "12px",
-              background: "linear-gradient(135deg, #f97316, #ef4444)",
+              width: "56px",
+              height: "56px",
+              borderRadius: "14px",
+              background: `linear-gradient(135deg, ${GOLD}, #A8893D)`,
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              fontSize: "28px",
+              fontSize: "30px",
               fontWeight: "900",
-              color: "white",
+              color: "#0f0f1a",
+              boxShadow: `0 0 30px rgba(201,168,76,0.5)`,
             }}
           >
             G
           </div>
-          <span style={{ color: "white", fontSize: "28px", fontWeight: "700", letterSpacing: "-0.5px" }}>
-            geras<span style={{ color: "#f97316" }}>medya</span>
-          </span>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <span style={{ color: "white", fontSize: "26px", fontWeight: "800", letterSpacing: "-0.5px", lineHeight: 1.1 }}>
+              Geras <span style={{ color: GOLD }}>Medya</span>
+            </span>
+            <span style={{ color: "rgba(255,255,255,0.35)", fontSize: "12px", letterSpacing: "0.2em", textTransform: "uppercase" }}>
+              Dijital Bir Çözüm
+            </span>
+          </div>
         </div>
 
         {/* Headline */}
         <div
           style={{
-            fontSize: "62px",
+            fontSize: "58px",
             fontWeight: "900",
             color: "white",
             textAlign: "center",
             lineHeight: "1.1",
             letterSpacing: "-1.5px",
-            maxWidth: "900px",
-            marginBottom: "20px",
+            maxWidth: "880px",
+            marginBottom: "18px",
           }}
         >
-          Meta Ads & Google Ads{" "}
-          <span
-            style={{
-              background: "linear-gradient(135deg, #f97316, #ef4444)",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-            }}
-          >
-            Uzmanı
-          </span>
+          Reklam Bütçenizin Her{" "}
+          <span style={{ color: GOLD_LIGHT }}>Kuruşu Satışa</span>{" "}
+          Dönüşsün.
         </div>
 
         {/* Subtitle */}
         <div
           style={{
-            fontSize: "22px",
-            color: "rgba(255,255,255,0.5)",
+            fontSize: "20px",
+            color: "rgba(255,255,255,0.45)",
             textAlign: "center",
-            maxWidth: "700px",
-            marginBottom: "40px",
+            maxWidth: "680px",
+            marginBottom: "36px",
             lineHeight: "1.5",
           }}
         >
-          Dijital reklamlarınızı veriye dayalı yönetiyor, her bütçeyi maksimum satışa dönüştürüyoruz.
+          Meta Ads · Google Ads · SEO · Web Tasarım · 50+ Mutlu Müşteri
         </div>
 
-        {/* Tags */}
-        <div style={{ display: "flex", gap: "12px" }}>
-          {["Meta Ads", "Google Ads", "SEO", "Web Tasarım"].map((tag) => (
+        {/* Stat chips */}
+        <div style={{ display: "flex", gap: "10px" }}>
+          {["+280% Satış", "ROAS 4.8x", "%340 ROI", "48s Kurulum"].map((stat) => (
             <div
-              key={tag}
+              key={stat}
               style={{
-                padding: "8px 20px",
+                padding: "8px 18px",
                 borderRadius: "100px",
-                border: "1px solid rgba(249,115,22,0.4)",
-                background: "rgba(249,115,22,0.1)",
-                color: "#f97316",
-                fontSize: "15px",
-                fontWeight: "600",
+                border: `1px solid rgba(201,168,76,0.4)`,
+                background: "rgba(201,168,76,0.08)",
+                color: GOLD_LIGHT,
+                fontSize: "14px",
+                fontWeight: "700",
               }}
             >
-              {tag}
+              {stat}
             </div>
           ))}
         </div>
@@ -133,9 +160,10 @@ export default function OGImage() {
         <div
           style={{
             position: "absolute",
-            bottom: "28px",
-            color: "rgba(255,255,255,0.25)",
-            fontSize: "16px",
+            bottom: "24px",
+            color: "rgba(255,255,255,0.2)",
+            fontSize: "15px",
+            letterSpacing: "0.05em",
           }}
         >
           gerasmedya.com
