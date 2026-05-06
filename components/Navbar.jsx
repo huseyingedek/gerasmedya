@@ -93,6 +93,9 @@ export default function Navbar() {
             )}
           </div>
 
+          <Link href="/hakkimizda" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
+            Hakkımızda
+          </Link>
           <Link href="/#neden-biz" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
             Neden Biz
           </Link>
@@ -150,6 +153,10 @@ export default function Navbar() {
               </div>
             )}
 
+            <Link href="/hakkimizda" onClick={() => setMenuOpen(false)}
+              className="flex items-center justify-between py-3 text-sm text-gray-300 font-medium border-b border-white/[0.05]">
+              Hakkımızda
+            </Link>
             <Link href="/#neden-biz" onClick={() => setMenuOpen(false)}
               className="flex items-center justify-between py-3 text-sm text-gray-300 font-medium border-b border-white/[0.05]">
               Neden Biz
