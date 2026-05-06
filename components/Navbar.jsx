@@ -165,4 +165,17 @@ export default function Navbar() {
               Neden Biz
             </Link>
             <Link href="/blog" onClick={() => setMenuOpen(false)}
-              className="flex items-center justify-between py-3 text-sm text-gray-300 font-
+              className="flex items-center justify-between py-3 text-sm text-gray-300 font-medium border-b border-white/[0.05]">
+              Blog
+            </Link>
+            <Link href="/iletisim" onClick={() => setMenuOpen(false)}
+              className="flex items-center justify-between py-3 text-sm text-gray-300 font-medium border-b border-white/[0.05]">
+              İletişim
+            </Link>
+          </div>
+
+        </div>
+      )}
+    </nav>
+  );
+}

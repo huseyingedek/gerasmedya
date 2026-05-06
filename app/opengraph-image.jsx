@@ -133,4 +133,43 @@ export default function OGImage() {
             lineHeight: "1.5",
           }}
         >
-          Meta Ads · Google Ads · SEO · Web Tasarım · 
+          Meta Ads · Google Ads · SEO · Web Tasarım · 50+ Mutlu Müşteri
+        </div>
+
+        {/* Stat chips */}
+        <div style={{ display: "flex", gap: "10px" }}>
+          {["+280% Satış", "ROAS 4.8x", "%340 ROI", "48s Kurulum"].map((stat) => (
+            <div
+              key={stat}
+              style={{
+                padding: "8px 18px",
+                borderRadius: "100px",
+                border: `1px solid rgba(201,168,76,0.4)`,
+                background: "rgba(201,168,76,0.08)",
+                color: GOLD_LIGHT,
+                fontSize: "14px",
+                fontWeight: "700",
+              }}
+            >
+              {stat}
+            </div>
+          ))}
+        </div>
+
+        {/* Bottom URL */}
+        <div
+          style={{
+            position: "absolute",
+            bottom: "24px",
+            color: "rgba(255,255,255,0.2)",
+            fontSize: "15px",
+            letterSpacing: "0.05em",
+          }}
+        >
+          gerasmedya.com
+        </div>
+      </div>
+    ),
+    { ...size }
+  );
+}

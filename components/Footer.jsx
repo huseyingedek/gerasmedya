@@ -43,4 +43,82 @@ export default function Footer() {
               ile işletmenizi büyütüyoruz.
             </p>
             <a
-              href
+              href="https://www.instagram.com/gerasmedya"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-xs text-gray-500 hover:text-gold-400 transition-colors"
+            >
+              📸 @gerasmedya
+            </a>
+          </div>
+
+          {/* Hizmetler */}
+          <div>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">
+              Hizmetler
+            </p>
+            <ul className="space-y-2.5">
+              {serviceLinks.map((l) => (
+                <li key={l.href}>
+                  <Link
+                    href={l.href}
+                    className="text-sm text-gray-500 hover:text-white transition-colors"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Şirket */}
+          <div>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">
+              Şirket
+            </p>
+            <ul className="space-y-2.5">
+              {companyLinks.map((l, i) => (
+                <li key={i}>
+                  <Link
+                    href={l.href}
+                    className="text-sm text-gray-500 hover:text-white transition-colors"
+                  >
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* CTA */}
+          <div>
+            <p className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-4">
+              Hızlı Başlangıç
+            </p>
+            <p className="text-sm text-gray-500 leading-relaxed mb-4">
+              Ücretsiz reklam hesabı analizi ile nerede durduğunuzu öğrenin.
+            </p>
+            <Link
+              href="/iletisim"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-gold-400 hover:text-gold-300 transition-colors border border-gold-500/30 rounded-lg px-4 py-2 hover:bg-gold-500/10"
+            >
+              Analiz İste →
+            </Link>
+          </div>
+        </div>
+
+        {/* Divider */}
+        <div className="border-t border-white/[0.05] pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
+          <p className="text-gray-600 text-xs">
+            © {currentYear} Geras Medya — Dijital Reklam Ajansı · Türkiye. Tüm hakları saklıdır.
+          </p>
+          {/* Keyword-rich hidden-but-visible micro copy for SEO */}
+          <p className="text-gray-700 text-xs text-center">
+            Meta Ads · Google Ads · SEO Optimizasyonu · Web Tasarım · Dijital Pazarlama
+          </p>
+        </div>
+
+      </div>
+    </footer>
+  );
+}

@@ -117,15 +117,10 @@ export default function Hero() {
       ))}
 
       {/* Main content */}
-      <div ref={heroRef} className="section-animate relative z-10 max-w-4xl mx-auto text-center">
+      <div ref={heroRef} className="section-animate relative z-10 max-w-4xl mx-auto mt-24 text-center">
 
         {/* Live badge */}
-        <div className="inline-flex items-center gap-2.5 mb-6 px-4 py-2 rounded-full border border-green-500/25 bg-green-500/8">
-          <span className="live-dot" />
-          <span className="text-green-400 text-xs font-semibold tracking-wide">Türkiye Geneli · Aktif Kampanya Yönetimi</span>
-          <span className="text-gray-600 text-xs">·</span>
-          <span className="text-gray-400 text-xs">50+ müşteri</span>
-        </div>
+
 
         {/* H1 — primary keyword: dijital reklam ajansı türkiye */}
         <h1 className="text-4xl sm:text-5xl md:text-[70px] font-black leading-[1.05] mb-4 tracking-tight">
@@ -207,4 +202,10 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="hidden sm:flex absolute bottom-
+      <div className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-gray-600">
+        <span className="text-[11px] tracking-widest uppercase">Keşfet</span>
+        <div className="w-px h-8 bg-gradient-to-b from-gold-500/50 to-transparent" />
+      </div>
+    </section>
+  );
+}
