@@ -93,25 +93,11 @@ export default function Navbar() {
             )}
           </div>
 
-          <Link href="/strateji" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
-            Strateji
-          </Link>
           <Link href="/#neden-biz" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
             Neden Biz
           </Link>
           <Link href="/iletisim" className="text-sm text-gray-400 hover:text-white transition-colors duration-200">
             İletişim
-          </Link>
-          <a
-            href="https://panel.gerasonline.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm font-semibold px-4 py-2 rounded-lg border border-gold-500/30 text-gold-400 hover:bg-gold-500/10 hover:border-gold-500/60 transition-all duration-200"
-          >
-            Panele Giriş
-          </a>
-          <Link href="/uye-ol" className="btn-primary text-sm font-semibold px-5 py-2.5 rounded-lg text-white">
-            Üye Ol
           </Link>
         </div>
 
@@ -164,10 +150,6 @@ export default function Navbar() {
               </div>
             )}
 
-            <Link href="/strateji" onClick={() => setMenuOpen(false)}
-              className="flex items-center justify-between py-3 text-sm text-gray-300 font-medium border-b border-white/[0.05]">
-              Strateji
-            </Link>
             <Link href="/#neden-biz" onClick={() => setMenuOpen(false)}
               className="flex items-center justify-between py-3 text-sm text-gray-300 font-medium border-b border-white/[0.05]">
               Neden Biz
@@ -178,23 +160,6 @@ export default function Navbar() {
             </Link>
           </div>
 
-          <div className="mt-4 space-y-2.5 pb-2">
-            <a
-              href="https://panel.gerasonline.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block text-center text-sm font-semibold px-5 py-3.5 rounded-xl border border-gold-500/30 text-gold-400 hover:bg-gold-500/10 transition-all"
-            >
-              Panele Giriş
-            </a>
-            <Link
-              href="/uye-ol"
-              className="btn-primary block text-sm font-semibold px-5 py-3.5 rounded-xl text-white text-center"
-              onClick={() => setMenuOpen(false)}
-            >
-              Üye Ol →
-            </Link>
-          </div>
         </div>
       )}
     </nav>
