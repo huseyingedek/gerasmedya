@@ -4,7 +4,7 @@ import Link from "next/link";
 import { services } from "@/lib/services-data";
 import CustomSelect from "@/components/CustomSelect";
 
-const FORMSPREE_ID = "YOUR_FORM_ID"; // ← formspree.io'dan al
+const FORMSPREE_ID = "mykojldl";
 
 const inputClass =
   "w-full bg-white/[0.04] border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-gray-600 focus:outline-none focus:border-gold-500/50 focus:bg-white/[0.06] transition-all duration-200 text-sm";
