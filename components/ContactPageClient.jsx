@@ -108,7 +108,7 @@ export default function ContactPageClient() {
               <span className="text-xl">📸</span> @gerasmedya
             </a>
             <a
-              href="https://wa.me/905XXXXXXXXX"
+              href="https://wa.me/905354676801"
               target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-3 text-sm text-gray-400 hover:text-green-400 transition-colors"
             >
