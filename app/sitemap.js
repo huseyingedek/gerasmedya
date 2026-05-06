@@ -7,15 +7,12 @@ export default function sitemap() {
     { url: baseUrl,                          lastModified: new Date(), changeFrequency: "weekly",  priority: 1    },
     { url: `${baseUrl}/hizmetler`,           lastModified: new Date(), changeFrequency: "monthly", priority: 0.9  },
     { url: `${baseUrl}/hakkimizda`,          lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
-    { url: `${baseUrl}/iletisim`,            lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/blog`,               lastModified: new Date(), changeFrequency: "weekly",  priority: 0.80 },
+    { url: `${baseUrl}/iletisim`,           lastModified: new Date(), changeFrequency: "monthly", priority: 0.85 },
   ];
 
   const servicePages = services.map((s) => ({
     url: `${baseUrl}/hizmetler/${s.slug}`,
     lastModified: new Date(),
     changeFrequency: "monthly",
-    priority: 0.85,
-  }));
-
-  return [...staticPages, ...servicePages];
-}
+    priority: 0.85

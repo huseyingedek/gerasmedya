@@ -122,19 +122,24 @@ export default function Hero() {
         {/* Live badge */}
         <div className="inline-flex items-center gap-2.5 mb-6 px-4 py-2 rounded-full border border-green-500/25 bg-green-500/8">
           <span className="live-dot" />
-          <span className="text-green-400 text-xs font-semibold tracking-wide">Aktif Kampanya Yönetimi</span>
+          <span className="text-green-400 text-xs font-semibold tracking-wide">Türkiye Geneli · Aktif Kampanya Yönetimi</span>
           <span className="text-gray-600 text-xs">·</span>
           <span className="text-gray-400 text-xs">50+ müşteri</span>
         </div>
 
-        {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl md:text-[70px] font-black leading-[1.05] mb-6 tracking-tight">
+        {/* H1 — primary keyword: dijital reklam ajansı türkiye */}
+        <h1 className="text-4xl sm:text-5xl md:text-[70px] font-black leading-[1.05] mb-4 tracking-tight">
           Reklam Bütçenizin
           <br />
           <span className="shimmer-text">Her Kuruşu Satışa</span>
           <br />
           <span className="text-white">Dönüşsün.</span>
         </h1>
+
+        {/* Keyword-rich subheading — secondary signal for search engines */}
+        <p className="text-sm text-gold-400/70 font-medium tracking-wide mb-5">
+          Türkiye&apos;nin Sonuç Odaklı Dijital Reklam Ajansı — Meta Ads · Google Ads · SEO
+        </p>
 
         {/* Subheadline */}
         <p className="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10 leading-relaxed">
@@ -202,10 +207,4 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="hidden sm:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-gray-600">
-        <span className="text-[11px] tracking-widest uppercase">Keşfet</span>
-        <div className="w-px h-8 bg-gradient-to-b from-gold-500/50 to-transparent" />
-      </div>
-    </section>
-  );
-}
+      <div className="hidden sm:flex absolute bottom-
