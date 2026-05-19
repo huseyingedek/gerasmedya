@@ -31,6 +31,20 @@ export default function ContactPageClient() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("sending");
+    
+    // GTM Event Tracking
+    if (typeof window !== "undefined" && window.dataLayer) {
+      window.dataLayer.push({
+        event: "form_submission",
+        form_name: "contact_form",
+        form_data: {
+          name: form.name,
+          service: form.service,
+          budget: form.budget,
+        },
+      });
+    }
+    
     try {
       const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
         method: "POST",
@@ -106,6 +120,12 @@ export default function ContactPageClient() {
               className="flex items-center gap-3 text-sm text-gray-400 hover:text-white transition-colors"
             >
               <span className="text-xl">📸</span> @gerasmedya
+            </a>
+            <a
+              href="tel:905354676801"
+              className="flex items-center gap-3 text-sm text-gray-400 hover:text-blue-400 transition-colors"
+            >
+              <span className="text-xl">☎️</span> Arayın
             </a>
             <a
               href="https://wa.me/905354676801"

@@ -94,6 +94,18 @@ export default function UyeOlClient() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || "Ödeme işlemi başarısız.");
+      
+      // GTM Event Tracking
+      if (typeof window !== "undefined" && window.dataLayer) {
+        window.dataLayer.push({
+          event: "purchase",
+          form_name: "membership_signup",
+          plan: selectedPlan,
+          user_name: form.name,
+          user_email: form.email,
+        });
+      }
+      
       setStep(3);
     } catch (err) {
       setError(err.message || "Bir hata oluştu, tekrar deneyin.");

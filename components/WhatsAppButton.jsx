@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 
 // ⚠️ NUMARAN: Aşağıdaki numarayı kendi WhatsApp numaranla değiştir
 // Örnek: 905321234567 (başında 90 olmalı, boşluk/tire olmadan)
-const WHATSAPP_NUMBER = "905XXXXXXXXX";
+const WHATSAPP_NUMBER = "905354676801";
 const WHATSAPP_MESSAGE = "Merhaba! Dijital reklam hizmetleriniz hakkında bilgi almak istiyorum.";
 
 export default function WhatsAppButton() {
